@@ -8,7 +8,7 @@ public class Client {
         editor.setContent("b");
         editor.setContent("c");
 
-        // Need to write logic for undo
-        // editor.undo();
+        editor.undoContent();
+        System.out.println(editor.getContent());
     }
 }
