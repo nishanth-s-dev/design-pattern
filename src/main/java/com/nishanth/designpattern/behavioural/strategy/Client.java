@@ -17,7 +17,8 @@ public class Client {
     public static void main(String[] args) {
         ImageFilter imageFilter = new BlackAndWhiteImageFilter();
         ImageCompressor imageCompressor = new JPEGCompressor();
-        ImageStorage imageStorage = new ImageStorage(imageCompressor, imageFilter);
-        imageStorage.store("test.jpeg");
+        ImageStorage imageStorage = new ImageStorage();
+
+        imageStorage.store("test.jpeg", imageCompressor, imageFilter);
     }
 }

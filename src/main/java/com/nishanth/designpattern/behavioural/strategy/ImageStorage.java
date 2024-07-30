@@ -5,15 +5,7 @@ import com.nishanth.designpattern.behavioural.strategy.compressor.ImageCompresso
 import com.nishanth.designpattern.behavioural.strategy.filter.ImageFilter;
 
 public class ImageStorage {
-    private final ImageCompressor compressor;
-    private final ImageFilter filter;
-
-    public ImageStorage(ImageCompressor compressor, ImageFilter filter) {
-        this.compressor = compressor;
-        this.filter = filter;
-    }
-
-    public void store(String fileName) {
+    public void store(String fileName, ImageCompressor compressor, ImageFilter filter) {
         // Compressing image
         compressor.compress();
 
