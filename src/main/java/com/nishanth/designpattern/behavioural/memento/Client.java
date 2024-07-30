@@ -8,10 +8,12 @@ public class Client {
 
         editor.setContent("a");
         editor.setTitle("title a");
+        editor.setTool("Brush");
         editorHistory.push(editor.createState());
 
         editor.setContent("b");
         editor.setTitle("title b");
+        editor.setTool("Eraser");
         editorHistory.push(editor.createState());
 
         editor.setContent("c");
@@ -20,11 +22,11 @@ public class Client {
 
         editor.setContent("d");
         editor.setTitle("title d");
+        editor.setTool("Pen");
 
-        editor.restore(editorHistory.pop());
-        editor.restore(editorHistory.pop());
         editor.restore(editorHistory.pop());
         System.out.println(editor.getContent());
         System.out.println(editor.getTitle());
+        System.out.println(editor.getTool());
     }
 }
