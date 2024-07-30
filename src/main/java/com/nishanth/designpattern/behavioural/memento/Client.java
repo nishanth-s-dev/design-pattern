@@ -9,6 +9,7 @@ public class Client {
         editor.setContent("c");
 
         editor.undoContent();
+        editor.undoContent();
         System.out.println(editor.getContent());
     }
 }
