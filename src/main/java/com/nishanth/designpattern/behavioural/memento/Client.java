@@ -4,12 +4,17 @@ package com.nishanth.designpattern.behavioural.memento;
 public class Client {
     public static void main(String[] args) {
         Editor editor = new Editor();
+        History editorHistory = new History();
+
         editor.setContent("a");
+        editorHistory.push(editor.createState());
+
         editor.setContent("b");
+        editorHistory.push(editor.createState());
+
         editor.setContent("c");
 
-        editor.undoContent();
-        editor.undoContent();
+        editor.restore(editorHistory.pop());
         System.out.println(editor.getContent());
     }
 }
