@@ -11,8 +11,12 @@ public class Client {
             System.out.println(url);
         }
 
-        for (int i = 0; i < history.getUrls().size(); i++) {
-            System.out.println(history.getUrls().get(i));
-        }
+//         There is no method size() in String[] array.
+//         There is no method for get() as well.
+//         These are breaking changes in outside.
+
+//        for (int i = 0; i < history.getUrls().size(); i++) {
+//            System.out.println(history.getUrls().get(i));
+//        }
     }
 }
