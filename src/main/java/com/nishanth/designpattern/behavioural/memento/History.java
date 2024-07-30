@@ -10,7 +10,12 @@ public class History {
     }
 
     public EditorState pop() {
-        return states.pop();
+        if (!states.isEmpty()) {
+            return states.pop();
+        } else {
+            System.out.println("Undo limit reached");
+        }
+        return null;
     }
 
     public boolean isHistoryEmpty() {
