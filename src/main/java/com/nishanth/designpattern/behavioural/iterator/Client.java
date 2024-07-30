@@ -7,12 +7,10 @@ public class Client {
         history.push("b");
         history.push("c");
 
-        for (String url : history.getUrls()) {
-            System.out.println(url);
-        }
-
-        for (int i = 0; i < history.getUrls().size(); i++) {
-            System.out.println(history.getUrls().get(i));
+        Iterator iterator = history.createIterator();
+        while (!iterator.isDone()) {
+            System.out.println(iterator.current());
+            iterator.next();
         }
     }
 }

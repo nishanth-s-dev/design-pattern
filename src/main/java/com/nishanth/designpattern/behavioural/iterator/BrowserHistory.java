@@ -16,4 +16,8 @@ public class BrowserHistory {
     public Stack<String> getUrls() {
         return urls;
     }
+
+    public Iterator createIterator() {
+        return new StackIterator(urls);
+    }
 }
