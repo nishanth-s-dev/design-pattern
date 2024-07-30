@@ -7,6 +7,9 @@ import com.nishanth.designpattern.behavioural.strategy.filter.BlackAndWhiteImage
 
 public class Client {
     public static void main(String[] args) {
-
+        ImageFilter imageFilter = new BlackAndWhiteImageFilter();
+        ImageCompressor imageCompressor = new JPEGCompressor();
+        ImageStorage imageStorage = new ImageStorage(imageCompressor, imageFilter);
+        imageStorage.store("test.jpeg");
     }
 }

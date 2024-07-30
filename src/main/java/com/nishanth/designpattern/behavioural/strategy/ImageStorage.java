@@ -1,7 +1,8 @@
 package com.nishanth.designpattern.behavioural.strategy;
 
-import com.nishanth.designpattern.behavioural.strategy.constant.ImageCompressor;
-import com.nishanth.designpattern.behavioural.strategy.constant.ImageFilter;
+
+import com.nishanth.designpattern.behavioural.strategy.compressor.ImageCompressor;
+import com.nishanth.designpattern.behavioural.strategy.filter.ImageFilter;
 
 public class ImageStorage {
     private final ImageCompressor compressor;
@@ -14,28 +15,12 @@ public class ImageStorage {
 
     public void store(String fileName) {
         // Compressing image
-        if (compressor == ImageCompressor.JPEG) {
-            System.out.println("JPEG compressor");
-        } else if (compressor == ImageCompressor.PNG) {
-            System.out.println("PNG compressor");
-        } else if (compressor == ImageCompressor.JPG) {
-            System.out.println("JPG compressor");
-        } else if (compressor == ImageCompressor.SVG) {
-            System.out.println("SVG compressor");
-        }
+        compressor.compress();
 
         // Filtering image
-        if (filter == ImageFilter.BEAUTIFY) {
-            System.out.println("Applying Beautify Filter");
-        } else if (filter == ImageFilter.BLACK_AND_WHITE) {
-            System.out.println("Applying Black and White Filter");
-        } else if (filter == ImageFilter.HIGH_CONTRAST) {
-            System.out.println("Applying High Contrast Filter");
-        } else if (filter == ImageFilter.BLUE_CONTRAST) {
-            System.out.println("Applying Blue Contrast Filter");
-        }
-
+        filter.filter();
 
         // Storing logic
+        System.out.println("Stored image to " + fileName);
     }
 }
