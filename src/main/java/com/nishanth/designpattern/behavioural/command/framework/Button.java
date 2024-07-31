@@ -1,4 +1,4 @@
-package com.nishanth.designpattern.behavioural.command;
+package com.nishanth.designpattern.behavioural.command.framework;
 
 public class Button {
     private String label;
