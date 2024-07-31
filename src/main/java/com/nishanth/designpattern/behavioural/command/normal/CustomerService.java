@@ -1,4 +1,4 @@
-package com.nishanth.designpattern.behavioural.command;
+package com.nishanth.designpattern.behavioural.command.normal;
 
 public class CustomerService {
     public void addCustomer() {

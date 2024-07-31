@@ -5,6 +5,9 @@ import com.nishanth.designpattern.behavioural.command.composite.CompositeCommand
 import com.nishanth.designpattern.behavioural.command.composite.ResizeImageCommand;
 import com.nishanth.designpattern.behavioural.command.framework.Button;
 import com.nishanth.designpattern.behavioural.command.framework.Command;
+import com.nishanth.designpattern.behavioural.command.normal.AddCustomerCommand;
+import com.nishanth.designpattern.behavioural.command.normal.CustomerService;
+import com.nishanth.designpattern.behavioural.command.normal.RemoveCustomerCommand;
 
 public class Client {
     public static void main(String[] args) {
