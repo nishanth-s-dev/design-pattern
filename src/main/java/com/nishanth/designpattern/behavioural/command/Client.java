@@ -8,6 +8,10 @@ import com.nishanth.designpattern.behavioural.command.framework.Command;
 import com.nishanth.designpattern.behavioural.command.normal.AddCustomerCommand;
 import com.nishanth.designpattern.behavioural.command.normal.CustomerService;
 import com.nishanth.designpattern.behavioural.command.normal.RemoveCustomerCommand;
+import com.nishanth.designpattern.behavioural.command.undoable.*;
+import com.nishanth.designpattern.behavioural.command.undoable.command.BoldCommand;
+import com.nishanth.designpattern.behavioural.command.undoable.command.UndoCommand;
+import com.nishanth.designpattern.behavioural.command.undoable.command.UndoableCommand;
 
 public class Client {
     public static void main(String[] args) {
@@ -24,5 +28,16 @@ public class Client {
         compositeCommand.addCommand(new ResizeImageCommand());
 
         button.click(compositeCommand);
+
+        History history = new History();
+        HtmlDocument htmlDocument = new HtmlDocument();
+        htmlDocument.setContent("Hello World");
+
+        UndoableCommand boldCommand = new BoldCommand(htmlDocument, history);
+        boldCommand.execute();
+
+        UndoCommand undoCommand = new UndoCommand(history);
+        undoCommand.execute();
+        System.out.println(htmlDocument.getContent());
     }
 }
