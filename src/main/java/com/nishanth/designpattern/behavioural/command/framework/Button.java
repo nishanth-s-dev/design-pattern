@@ -3,9 +3,8 @@ package com.nishanth.designpattern.behavioural.command.framework;
 public class Button {
     private String label;
 
-    public void click() {
-        // This method should behave different, based on who is and where is used.
-        // Decided at run time. Like if user want to add, edit or delete customer. This should behave differently.
+    public void click(Command command) {
+        command.execute();
     }
 
     public String getLabel() {
