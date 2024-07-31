@@ -5,5 +5,17 @@ package com.nishanth.designpattern.behavioural.observer;
 
 public class Client {
     public static void main(String[] args) {
+        DataSource dataSource = new DataSource();
+        dataSource.setValue(10);
+
+        SpreadSheet spreadSheetOne = new SpreadSheet();
+        SpreadSheet spreadSheetTwo = new SpreadSheet();
+        Chart chart = new Chart();
+
+        dataSource.addObserver(spreadSheetOne);
+        dataSource.addObserver(spreadSheetTwo);
+        dataSource.addObserver(chart);
+
+        dataSource.setValue(20);
     }
 }
