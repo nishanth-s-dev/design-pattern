@@ -1,20 +1,14 @@
 package com.nishanth.designpattern.behavioural.mediator;
 
-import com.nishanth.designpattern.behavioural.mediator.form.ArticlesListBox;
-import com.nishanth.designpattern.behavioural.mediator.form.SaveButton;
-import com.nishanth.designpattern.behavioural.mediator.form.TitleTextBox;
+import com.nishanth.designpattern.behavioural.mediator.form.ArticlesDialogBox;
 
 public class Client {
     public static void main(String[] args) {
-        SaveButton saveButton = new SaveButton();
-        TitleTextBox titleTextBox = new TitleTextBox(saveButton);
-        ArticlesListBox articlesListBox = new ArticlesListBox(saveButton, titleTextBox);
+        ArticlesDialogBox articlesDialogBox = new ArticlesDialogBox();
 
-        // Both will enable button
-        titleTextBox.setContent("something.txt");
-        // OR
-        articlesListBox.changed();
+        articlesDialogBox.simulateUserInteration();
+        articlesDialogBox.simulateUserInterationUsingTitleTextBox();
 
-        saveButton.clicked();
+        articlesDialogBox.simulateUserInterationEmptyTitleContent();
     }
 }
