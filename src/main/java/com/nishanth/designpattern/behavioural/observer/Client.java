@@ -8,9 +8,9 @@ public class Client {
         DataSource dataSource = new DataSource();
         dataSource.setValue(10);
 
-        SpreadSheet spreadSheetOne = new SpreadSheet();
-        SpreadSheet spreadSheetTwo = new SpreadSheet();
-        Chart chart = new Chart();
+        SpreadSheet spreadSheetOne = new SpreadSheet(dataSource);
+        SpreadSheet spreadSheetTwo = new SpreadSheet(dataSource);
+        Chart chart = new Chart(dataSource);
 
         dataSource.addObserver(spreadSheetOne);
         dataSource.addObserver(spreadSheetTwo);
