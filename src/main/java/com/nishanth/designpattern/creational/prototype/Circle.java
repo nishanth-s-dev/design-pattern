@@ -8,11 +8,18 @@ public class Circle implements Component{
         System.out.println("Rendering Circle");
     }
 
-    public int getRedius() {
+    @Override
+    public Component clone() throws CloneNotSupportedException {
+        Circle newCircle = new Circle();
+        newCircle.radius = this.radius;
+        return newCircle;
+    }
+
+    public int getRadius() {
         return radius;
     }
 
-    public void setRedius(int redius) {
+    public void setRadius(int redius) {
         this.radius = redius;
     }
 }
