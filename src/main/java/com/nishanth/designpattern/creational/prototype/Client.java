@@ -6,5 +6,7 @@ public class Client {
         ContextMenu contextMenu = new ContextMenu();
 
         contextMenu.duplicate(circle);
+
+        System.out.println("This commit for confirm - my solution is prototype pattern \uD83D\uDE0E");
     }
 }
