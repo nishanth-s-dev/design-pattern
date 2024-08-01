@@ -5,4 +5,9 @@ public class HeadingNode implements HtmlNode {
     public void highlight() {
         System.out.println("highlight heading");
     }
+
+    @Override
+    public void plainText() {
+        System.out.println("Plain heading");
+    }
 }

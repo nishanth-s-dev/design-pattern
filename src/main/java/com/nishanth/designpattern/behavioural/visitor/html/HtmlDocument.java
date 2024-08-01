@@ -17,4 +17,10 @@ public class HtmlDocument {
             node.highlight();
         }
     }
+
+    public void plainText() {
+        for (HtmlNode node : nodes) {
+            node.plainText();
+        }
+    }
 }

@@ -10,5 +10,6 @@ public class Client {
         htmlDocument.addNode(new HeadingNode());
         htmlDocument.addNode(new AnchorNode());
         htmlDocument.highlight();
+        htmlDocument.plainText();
     }
 }
