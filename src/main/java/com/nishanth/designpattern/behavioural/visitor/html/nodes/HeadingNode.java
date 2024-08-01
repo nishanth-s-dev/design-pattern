@@ -1,0 +1,8 @@
+package com.nishanth.designpattern.behavioural.visitor.html.nodes;
+
+public class HeadingNode implements HtmlNode {
+    @Override
+    public void highlight() {
+        System.out.println("highlight heading");
+    }
+}
