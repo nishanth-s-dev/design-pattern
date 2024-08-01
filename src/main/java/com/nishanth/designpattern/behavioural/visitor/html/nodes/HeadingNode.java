@@ -1,13 +1,10 @@
 package com.nishanth.designpattern.behavioural.visitor.html.nodes;
 
+import com.nishanth.designpattern.behavioural.visitor.html.nodes.operation.Operation;
+
 public class HeadingNode implements HtmlNode {
     @Override
-    public void highlight() {
-        System.out.println("highlight heading");
-    }
-
-    @Override
-    public void plainText() {
-        System.out.println("Plain heading");
+    public void execute(Operation operation) {
+        operation.executeOperation(this);
     }
 }

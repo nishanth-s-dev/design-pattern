@@ -1,6 +1,7 @@
 package com.nishanth.designpattern.behavioural.visitor.html;
 
 import com.nishanth.designpattern.behavioural.visitor.html.nodes.HtmlNode;
+import com.nishanth.designpattern.behavioural.visitor.html.nodes.operation.Operation;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -12,15 +13,9 @@ public class HtmlDocument {
         nodes.add(node);
     }
 
-    public void highlight() {
+    public void execute(Operation operation) {
         for (HtmlNode node : nodes) {
-            node.highlight();
-        }
-    }
-
-    public void plainText() {
-        for (HtmlNode node : nodes) {
-            node.plainText();
+            node.execute(operation);
         }
     }
 }

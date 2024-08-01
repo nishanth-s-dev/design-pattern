@@ -1,13 +1,10 @@
 package com.nishanth.designpattern.behavioural.visitor.html.nodes;
 
+import com.nishanth.designpattern.behavioural.visitor.html.nodes.operation.Operation;
+
 public class AnchorNode implements HtmlNode{
     @Override
-    public void highlight() {
-        System.out.println("Highlight Anchor");
-    }
-
-    @Override
-    public void plainText() {
-        System.out.println("Plain Anchor");
+    public void execute(Operation operation) {
+        operation.executeOperation(this);
     }
 }
